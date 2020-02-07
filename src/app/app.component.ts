@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Directivas';
+
+  estilosParrafo: any;
+  mostrar: boolean;
+
+  constructor() {
+    this.estilosParrafo = {
+      color: 'green',
+      fontSize: '2em',
+    };
+    this.mostrar = true;
+  }
+
+  manejarClick() {
+    this.estilosParrafo.backgroundColor = 'yellow';
+    this.mostrar = !this.mostrar;
+  }
+
+  // manejarCambioColor($event) {
+  //   this.estilosParrafo.backgroundColor = $event.target.value;
+  // }
+
+  manejarTamano($event) {
+    this.estilosParrafo.fontSize = `${$event.target.value}px`;
+  }
 }

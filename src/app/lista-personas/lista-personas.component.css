@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.persona-item {
+    width: 400px;
+    border: 1px solid black;
+    padding: 5px 25px;
+    margin-top: 20px;
+}
+
+.persona-item h3 {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
