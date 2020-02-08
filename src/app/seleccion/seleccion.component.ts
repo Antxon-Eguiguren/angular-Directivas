@@ -7,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeleccionComponent implements OnInit {
 
-  puerta: string;
+  puertaConNgModel: string;
+  puertaConBoton: string;
 
   constructor() {
-    this.puerta = 'uno';
+    this.puertaConNgModel = '';
+    this.puertaConBoton = '';
   }
 
   ngOnInit() {
+  }
+
+  manejarClick(pPuerta) {
+    if (pPuerta === 1) {
+      this.puertaConBoton = 'uno';
+    } else if (pPuerta === 2) {
+      this.puertaConBoton = 'dos';
+    } else {
+      this.puertaConBoton = 'tres';
+    }
   }
 
 }

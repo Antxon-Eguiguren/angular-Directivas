@@ -1,15 +1,15 @@
 <table>
     <tr>
-        <th>Número</th>
+        <th>Número (Índice del ngFor)</th>
         <th>Título</th>
         <th>Director</th>
-        <th>Primero</th>
-        <th>Ultimo</th>
-        <th>Pares</th>
-        <th>Impares</th>
+        <th>Primer Elemento</th>
+        <th>Último Elemento</th>
+        <th>Elementos Pares</th>
+        <th>Elementos Impares</th>
     </tr>
     <tr *ngFor="let episodio of episodios; let indice = index, let primero = first; let ultimo = last; let pares = even; let impares = odd;"
-        [ngClass]="{ filaPar: pares, filaImpar: !pares }">
+        [ngClass]="{ filaPar: pares, filaImpar: impares }">
         <td>{{ indice }}</td>
         <td>{{ episodio.title }}</td>
         <td>{{ episodio.director }}</td>

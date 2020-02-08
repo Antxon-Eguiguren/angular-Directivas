@@ -3,5 +3,6 @@
 }
 
 .filaImpar {
-    background-color: impar;
+    background-color: red;
+    color:white;
 }

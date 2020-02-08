@@ -11,4 +11,5 @@ export class Persona {
         this.edad = pEdad;
         this.direccion = pDireccion;
     }
+
 }

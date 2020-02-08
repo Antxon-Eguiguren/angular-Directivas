@@ -1,9 +1,12 @@
-<button (click)="manejarClick()">Cambia Color y Muestra/Oculta Parrafo</button>
+<!-- INICIO: Gestión de Directivas dentro del primer párrafo: Aplicamos [ngStyle], [(ngModel)] y *ngIf-->
+<button (click)="manejarClick()">Cambia Color Texto, Pone Background Amarillo y Muestra/Oculta Parrafo</button>
+
 <input type="text" [(ngModel)]="estilosParrafo.color">
-<p [ngStyle]="estilosParrafo" *ngIf="mostrar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt
-  ab distinctio
-  vel nisi unde eius
-  perferendis excepturi itaque quidem possimus placeat quaerat dicta recusandae, eos facilis beatae, porro non!</p>
+<p>{{estilosParrafo | json}}</p>
+
+<p [ngStyle]="estilosParrafo" *ngIf="mostrar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat et eum,
+  mollitia nobis a quam, aliquam quos amet ex quibusdam voluptatibus temporibus corrupti odio tempora quod dignissimos
+  nemo suscipit ipsa!</p>
 
 <p *ngIf="!mostrar">Otro párrafo</p>
 
@@ -14,14 +17,22 @@
   <option value="red">Rojo</option>
 </select>
 
-<input (input)="manejarTamano($event)" type="range">
+<input type="range" (input)="manejarTamano($event)">
+<!-- FIN: Gestión de Directivas dentro del primer párrafo: Aplicamos [ngStyle], [(ngModel)] y *ngIf-->
 
+<!-- Aplicamos el [ngClass] -->
 <app-semaforo></app-semaforo>
-<app-episodios></app-episodios>
+
+<!-- Aplicamos el *ngFor y creamos una clase Persona -->
 <app-lista-personas></app-lista-personas>
 
+<!-- Aplicamos el *ngFor y [ngClass] -->
+<app-episodios></app-episodios>
+
+<!-- Aplicamos el [ngSwitch] y [(ngModel)] -->
 <app-seleccion></app-seleccion>
 
+<!-- Creamos una directiva personalizada [subrayado] -->
 <p subrayado>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, assumenda accusamus? Dolore, in officia.
   Repellendus neque laboriosam labore consequuntur eius fugiat, expedita alias commodi, dolores praesentium, blanditiis
   tempora ea. Repellat.</p>

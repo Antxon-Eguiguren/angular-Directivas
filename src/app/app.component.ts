@@ -23,10 +23,6 @@ export class AppComponent {
     this.mostrar = !this.mostrar;
   }
 
-  // manejarCambioColor($event) {
-  //   this.estilosParrafo.backgroundColor = $event.target.value;
-  // }
-
   manejarTamano($event) {
     this.estilosParrafo.fontSize = `${$event.target.value}px`;
   }
